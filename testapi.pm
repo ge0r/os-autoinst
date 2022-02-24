@@ -1417,7 +1417,7 @@ sub send_key_until_needlematch {
         wait_screen_change {
             send_key $key;
         };
-        if (!$counter--) {
+        if (!--$counter) {
             assert_screen $tag, 1;
         }
     }
